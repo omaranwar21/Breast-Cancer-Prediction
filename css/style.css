@@ -197,13 +197,8 @@ section:nth-child(even){
 }
 
 .about span2{
-<<<<<<< HEAD
 	text-transform:none;
 	color:var(--pink);
-=======
-    text-transform: none;
-    color:var(--pink);
->>>>>>> 52a462fc68ddc4b91f90de67420835c4932d9672
 }
 
 .result .row{
