@@ -95,23 +95,20 @@
             <img src="{{ url_for('static', filename='image/research.svg') }}" alt="">
         </div>
 
-        <form action="">
+        <form action="", method="post">
             <h3> Check your Results</h3>
-            <input type="text" placeholder="your name" class="box">
-            <input type="text" placeholder="your number" class="box">
-            <input type="email" placeholder="your email" class="box">
-            <input type="date" class="box">
-			<input type="text" placeholder="your name" class="box">
-			<input type="text" placeholder="your name" class="box">
-			<input type="text" placeholder="your name" class="box">
-			<input type="text" placeholder="your name" class="box">
-            <input type="submit" value=" Check" class="btn">
+            <input type="text" placeholder="Your Name" class="box" name="name" >
+            <input type="number" placeholder="Perimeter  Worst" class="box" name="Perimeter" required max="402" min="20">
+			<input type="number" placeholder="Area Worst" class="box" name="Area" required max="6808" min="73">
+			<input type="number" placeholder="Radius Worst" class="box" name="Radius" required max="58" min="3">
+			<input type="number" placeholder="Concave Points Worst" class="box" name="Concave_Points" required max="0.5" min="0">
+            <input type="submit" value="Check" class="btn">
+            <div> {{ predictionText }}</div>
         </form>
 
     </div>
 
 </section>
-
 <!-- result section ends -->
 
 <!-- footer section starts  -->
