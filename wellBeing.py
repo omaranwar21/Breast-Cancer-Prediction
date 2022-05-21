@@ -2,18 +2,23 @@ import os
 from werkzeug.utils import secure_filename
 from flask import Flask, request, render_template
 
-wellBeing = Flask(__name__, template_folder="templetes")
+wellBeing = Flask(__name__, template_folder="templates")
 
-if __name__ == '__main__':
+@wellBeing.route('/')
+def website():
+    return render_template('WellBeing.html')
+
+if __name__ == "__main__":
     wellBeing.run(debug=True) 
 
-@wellBeing.route('WellBeing.html?#result', methods=['GET', 'POST'])
-def wellBeing():
-    if request.method == 'POST':
-        # Get the file from post request
-        text = request.form['text']
+
+# @wellBeing.route('WellBeing.html?#result', methods=['GET', 'POST'])
+# def wellBeing():
+#     if request.method == 'POST':
+#         # Get the file from post request
+#         text = request.form['text']
         
-        wellBeing = wellBeing()
+#         wellBeing = wellBeing()
         
-        return wellBeing.predict(text)
-    return None
+#         return wellBeing.predict(text)
+#     return None
