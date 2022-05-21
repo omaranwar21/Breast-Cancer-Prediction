@@ -1,6 +1,7 @@
-import os
-from werkzeug.utils import secure_filename
-from flask import Flask, request, render_template
+import numpy as np
+import pickle
+from flask import Flask, url_for, render_template, request
+model = pickle.load(open("model.pkl", "rb"))
 
 wellBeing = Flask(__name__, template_folder="templates")
 
@@ -8,17 +9,21 @@ wellBeing = Flask(__name__, template_folder="templates")
 def website():
     return render_template('WellBeing.html')
 
+@wellBeing.route('/', methods=['POST'])
+def predict():
+    print(request.form.values())
+    formValues = [j for j in request.form.values()]
+    name = formValues[0]
+    formValues.pop(0)
+    floatFeatures = [float(j) for j in formValues]
+    print(name)
+    features = [np.array (floatFeatures)]
+    prediction = model.predict (features)
+    if prediction == 1:
+        return render_template('WellBeing.html', predictionText= "Unfortunatly, It is a Tumor.")
+    else:
+        return render_template('WellBeing.html', predictionText= "Congratulations! It is a Benign Tumor.")
+       
 if __name__ == "__main__":
     wellBeing.run(debug=True) 
 
-
-# @wellBeing.route('WellBeing.html?#result', methods=['GET', 'POST'])
-# def wellBeing():
-#     if request.method == 'POST':
-#         # Get the file from post request
-#         text = request.form['text']
-        
-#         wellBeing = wellBeing()
-        
-#         return wellBeing.predict(text)
-#     return None
