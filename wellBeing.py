@@ -1,3 +1,4 @@
+# from crypt import methods
 import numpy as np
 import pickle
 from flask import Flask, url_for, render_template, request
@@ -20,10 +21,15 @@ def predict():
     features = [np.array (floatFeatures)]
     prediction = model.predict (features)
     if prediction == 1:
-        return render_template('WellBeing.html', predictionText= "Unfortunatly, It is a Tumor.")
+        return render_template('WellBeing.html', state= "Unfortunatly", predictionText=", It is a Tumor.")
     else:
-        return render_template('WellBeing.html', predictionText= "Congratulations! It is a Benign Tumor.")
+        return render_template('WellBeing.html', state= "Congratulations!", predictionText= "It is a Benign Tumor.")
        
+# @wellBeing.route('/', methods['post'])
+# def result():
+
+#     return render_template('WellBeing.html')
+
 if __name__ == "__main__":
     wellBeing.run(debug=True) 
 

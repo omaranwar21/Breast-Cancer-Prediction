@@ -231,6 +231,11 @@ section:nth-child(even){
     padding-bottom: 1rem;
     font-size: 3rem;
 }
+.result .row form h3 span{
+    color:var(--pink);
+    padding-bottom: 1rem;
+    font-size: 3rem;
+}
 
 .result .row form .box{
     width: 100%;

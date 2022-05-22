@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="/Static/image/favicon.ico" type="image/png"/>
+	<link rel="shortcut icon" href="{{ url_for('static', filename='image/breast-cancer.ico.ico') }}" type="image/png"/>
 	<title>WellBeing </title>
    
 	<!-- aos css file cdn link  -->
@@ -101,9 +101,13 @@
             <input type="number" placeholder="Perimeter  Worst" class="box" name="Perimeter" required max="402" min="20">
 			<input type="number" placeholder="Area Worst" class="box" name="Area" required max="6808" min="73">
 			<input type="number" placeholder="Radius Worst" class="box" name="Radius" required max="58" min="3">
-			<input type="number" placeholder="Concave Points Worst" class="box" name="Concave_Points" required max="0.5" min="0">
+			<input type="text" placeholder="Concave Points Worst" class="box" name="Concave_Points" required max="1.0" min="0.0">
             <input type="submit" value="Check" class="btn">
-            <div> {{ predictionText }}</div>
+            <h3>
+                <div>
+                <span> {{state}} </span> 
+                {{ predictionText }}
+            </div></h3>
         </form>
 
     </div>
