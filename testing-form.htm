@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./testing.css">
+    	aos css file cdn link 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+    <link rel="stylesheet" href="./Static/css/style.css">
 </head>
 <body>
     <div class="container"> 
@@ -17,13 +26,24 @@
                     </center> -->
                     <img src="./Static/image/research.svg" alt="" class="research-img">
                 </div>
-                <!-- <div class="right">
-                    <input type="text" placeholder="Email"><br><br>
+                <div class="right">
+                    <!-- <input type="text" placeholder="Email"><br><br>
                     <input type="password" placeholder="Password"><br><br>
                     <button class="btn1" onclick="flip()">LOGIN</button><br><br>
-                    <a href="#">Forgot password?</a>
-                </div> -->
-                
+                    <a href="#">Forgot password?</a> -->
+                    <!-- <h1 class="heading"> <span>Fill </span> in <span>your</span> data </h1>     -->
+                    <form action="", method="post" class="row">
+                        <h3> Check your Results</h3>
+                        <input type="text" placeholder="Your Name" class="box" name="name" >
+                        <input type="number" placeholder="Perimeter  Worst" class="box" name="Perimeter" required max="402" min="20">
+                        <input type="number" placeholder="Area Worst" class="box" name="Area" required max="6808" min="73">
+                        <input type="number" placeholder="Radius Worst" class="box" name="Radius" required max="58" min="3">
+                        <input type="text" placeholder="Concave Points Worst" class="box" name="Concave_Points" required max="1.0" min="0.0">
+                        <input type="submit" value="Check" class="btn" onclick="flip()">
+
+                    </form>
+                </div>
+
 
             </div>
             <div class="back">
@@ -35,12 +55,12 @@
                     </center>
                 </div>
                 <div class="right">
-                    <input type="text" placeholder="Name">
-                    <br><br>
-                    <input type="text" placeholder="Email">
-                    <br><br>
-                    <input type="text" placeholder="Password"><br><br>
-                    <button class="btn1" onclick="flip1()">SIGN UP</button>
+                    <h3>
+                        <div>
+                        <span> {{state}} </span> 
+                        {{ predictionText }}
+                    </div></h3>
+                    <button class="btn1" onclick="flip1()">Re-test</button>
                 </div>
 
             </div>

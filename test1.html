@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+    <link rel="stylesheet" href="./Static/css/style.css">
 
 </head>
 <body>
@@ -95,7 +96,7 @@
             <div class="front">
                 <!-- <div class="left"> -->
                     <div class="image"> 
-                        <img src="{{ url_for('static', filename='image/research.svg') }}" alt="">
+                        <img src="./Static/image/research.svg" alt="">
                     </div>
                 <!-- </div> -->
 <!--     
@@ -118,7 +119,7 @@
             <div class="back">
                 <!-- <div class="left"> -->
                     <div class="image"> 
-                        <img src="{{ url_for('static', filename='image/research.svg') }}" alt="">
+                        <img src="./Static/image/research.svg" alt="">
                     </div>
                 <!-- </div> -->
                 <!-- <div class="right"> -->
@@ -197,5 +198,6 @@ AOS.init({
         document.getElementById("form-1").style.transform='rotateY(0deg)';
     }
 </script>
+
 </body>
 </html>
