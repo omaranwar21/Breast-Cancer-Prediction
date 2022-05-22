@@ -251,28 +251,6 @@ section:nth-child(even){
     padding-bottom: 1rem;
     font-size: 3rem;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-.reset h3 {
-    color:var(--black);
-    padding-bottom: 1rem;
-    font-size: 3rem;
-    text-align: center;
-    width: 300px;
-    height: 20px;
-    margin-top: 290px;
-    display: block;
-    margin-left: -1140px;
-}
-.result .row form h3 span{
-    color:var(--pink);
-    padding-bottom: 1rem;
-    font-size: 3rem;
-}
-=======
->>>>>>> parent of 1651fba (front edits 2)
-=======
->>>>>>> parent of 1651fba (front edits 2)
 
 .result .row form .box{
     width: 100%;
