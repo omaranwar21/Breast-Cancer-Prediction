@@ -94,14 +94,31 @@ section:nth-child(even){
     background: #fff;
 }
 
-.header .logo{
+.header .image{
+    flex:1 1 45rem;
+    box-align: right;
+}
+.header .image img{
+    float: left;
+    width: 45px;
+    height: 45px;
+}
+.header h1{
+    font-size: 3rem;
+    position: relative;
+    top: 2px;
+    left: -8px;
+}
+    
+
+/* .header .logo{
     font-size: 2.5rem;
     color: var(--black);
 }
 
 .header .logo i{
     color: var(--pink);
-}
+} */
 
 .header .navbar a{
     font-size: 1.7rem;
@@ -152,6 +169,12 @@ section:nth-child(even){
 .home .content h3{
     font-size: 5.5rem;
     color:var(--black);
+    line-height: 1.8;
+    text-shadow: var(--text-shadow);
+}
+.home .content h2{
+    font-size: 4rem;
+    color:  var(--black);
     line-height: 1.8;
     text-shadow: var(--text-shadow);
 }
