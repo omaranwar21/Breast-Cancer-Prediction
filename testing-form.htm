@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./testing.css">
+</head>
+<body>
+    <div class="container"> 
+        <div class="form" id="form">
+            <div class="front">
+                <div class="left">
+                    <!-- <center><div class="title1">Are you a new user?</div>
+                    <button class="btn2" onclick="flip()">SIGNUP</button>
+                    </center> -->
+                    <img src="./Static/image/research.svg" alt="" class="research-img">
+                </div>
+                <!-- <div class="right">
+                    <input type="text" placeholder="Email"><br><br>
+                    <input type="password" placeholder="Password"><br><br>
+                    <button class="btn1" onclick="flip()">LOGIN</button><br><br>
+                    <a href="#">Forgot password?</a>
+                </div> -->
+                
+
+            </div>
+            <div class="back">
+                <div class="left">
+                    <center>
+                        <!-- <div class="title2">Already have an account?</div>
+                        <button class="btn2" onclick="flip1()">LOGIN</button> -->
+                        <img src="./Static/image/research.svg" alt="" class="research-img">
+                    </center>
+                </div>
+                <div class="right">
+                    <input type="text" placeholder="Name">
+                    <br><br>
+                    <input type="text" placeholder="Email">
+                    <br><br>
+                    <input type="text" placeholder="Password"><br><br>
+                    <button class="btn1" onclick="flip1()">SIGN UP</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function flip(){
+            document.getElementById("form").style.transform='rotateY(180deg)';
+        }
+        function flip1(){
+            document.getElementById("form").style.transform='rotateY(0deg)';
+        }
+    </script>
+</body>
+</html>
