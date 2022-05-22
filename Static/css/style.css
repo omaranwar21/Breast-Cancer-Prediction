@@ -94,31 +94,14 @@ section:nth-child(even){
     background: #fff;
 }
 
-.header .image{
-    flex:1 1 45rem;
-    box-align: right;
-}
-.header .image img{
-    float: left;
-    width: 45px;
-    height: 45px;
-}
-.header h1{
-    font-size: 3rem;
-    position: relative;
-    top: 2px;
-    left: -8px;
-}
-    
-
-/* .header .logo{
+.header .logo{
     font-size: 2.5rem;
     color: var(--black);
 }
 
 .header .logo i{
     color: var(--pink);
-} */
+}
 
 .header .navbar a{
     font-size: 1.7rem;
@@ -172,12 +155,6 @@ section:nth-child(even){
     line-height: 1.8;
     text-shadow: var(--text-shadow);
 }
-.home .content h2{
-    font-size: 4rem;
-    color:  var(--black);
-    line-height: 1.8;
-    text-shadow: var(--text-shadow);
-}
 
 .home .content p{
     font-size: 1.7rem;
@@ -224,16 +201,19 @@ section:nth-child(even){
 	color:var(--pink);
 }
 
-
+.result .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:2rem;
+}
  
 .result .row .image{
     flex:1 1 45rem;
 }
 
 .result .row .image img{
-    width: 400;
-    height: 400;
-    object-fit: cover;
+    width: 100%;
 }
 
 .result .row form{
@@ -366,156 +346,4 @@ section:nth-child(even){
         font-size: 50%;
     }
 
-}
-
-.form-1{
-    height: 100%;
-    width: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
-    transition: 1s ease-in;
-    font-family: 'Questrial',sans-serif;
-    /* transform: rotateY(-180deg); */
-}
-.form-2{
-    height: 100%;
-    width: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
-    transition: 1s ease-in;
-    font-family: 'Questrial',sans-serif;
-    /* transform: rotateY(-180deg); */
-    left: -350px;
-}
-
-
-.container-1 {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 350px;
-    width: 600px;
-    perspective: 800px;
-    -webkit-perspective: 800px;
-}
-
-.result .row{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap:1rem;
-    
-}
-
-
-.result .container{
-    position: absolute;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 350px;
-    width: 600px;
-    perspective: 800px;
-    -webkit-perspective: 800px;
-}
-.result .form{
-    height: 100%;
-    width: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
-    transition: 1s ease-in;
-    font-family: 'Questrial',sans-serif;
-    /* transform: rotateY(-180deg); */
-}
-.result .front {
-    background-color: transparent;
-    height: 350px;
-    width: 600px;
-    position: relative;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    display: grid;
-    grid-template-columns: 700px 500px;
-    
-}
-.result .back {
-    bottom: 350px;
-    transform: rotateY(180deg);
-    background-color: transparent;
-    height: 350px;
-    width: 600px;
-    position: relative;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    display: grid;
-    grid-template-columns: 700px 300px;
-}
-.result .left {
-    height: 500px;
-    width: 400px;
-    box-sizing: border-box;
-    background-color: transparent;
-    padding-top: 120px;
-    margin-left: 20px;
-}
-.result .right {
-    height: 500px;
-    width: 600px;
-    box-sizing: border-box;
-    position: relative;
-    bottom: 615px;
-    left: 450px;
-    padding-top: 115px;
-    padding-left: 20px;
-    
-}
-input{
-    width:260px;
-    border:none;
-    border-bottom: 2px solid #d1d1d1;
-    font-size: 18px;
-    outline: none;
-}
-/* .back {
-    display: grid;
-    grid-template-columns: 500px 500px;
-} */
-.result .btn1,.result .btn2{
-    color:white;
-    font-size: 25px;
-    background-color: #6699ff;
-    padding:8px;
-    border:none;
-    width: 260px;
-    outline: none;
-}
-.result .btn2{
-    border: 2px solid white;
-    cursor: pointer;
-}
-.result .title1, .result .title2{
-    color:white;
-    font-size: 25px;
-    margin-bottom: 50px;
-    position: relative;
-}
-.result .a{
-    font-size: 20px;
-    color: #262626;
-}
-
-.result .research-img {
-    position: relative;   
-}
-.reset {
-    margin-left: 20px;
-    display: block;
 }
