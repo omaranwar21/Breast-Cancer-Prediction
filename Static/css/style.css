@@ -251,6 +251,7 @@ section:nth-child(even){
     padding-bottom: 1rem;
     font-size: 3rem;
 }
+<<<<<<< HEAD
 .reset h3 {
     color:var(--black);
     padding-bottom: 1rem;
@@ -267,6 +268,8 @@ section:nth-child(even){
     padding-bottom: 1rem;
     font-size: 3rem;
 }
+=======
+>>>>>>> parent of 1651fba (front edits 2)
 
 .result .row form .box{
     width: 100%;
