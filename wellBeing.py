@@ -31,7 +31,7 @@ def result():
     elif prediction == 0:
         prediction_text = 'Benign'
 
-    return render_template ('result.html', prediction_text = 'The Tumor is {}'.format(prediction_text),)
+    return render_template ('result.html', prediction_text = 'The Tumor is {}'.format(prediction_text))
        
 if __name__ == "__main__":
     wellBeing.run(debug=True) 

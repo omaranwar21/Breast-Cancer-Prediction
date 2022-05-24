@@ -74,9 +74,9 @@ AOS.init({
 let output = '{{ prediction_text }}'
 
 if (output === 'The Tumor is Malignant')
-    Swal.fire("Unfortunatly", output, '', 'warning')
+    Swal.fire("Unfortunatly"+''+output, '', 'warning')
 else if (output === 'The Tumor is Benign')
-    Swal.fire("Congratulations!" , output, '', 'success')
+    Swal.fire("Congratulations!"+''+ output, '', 'success')
 </script>
 
 
