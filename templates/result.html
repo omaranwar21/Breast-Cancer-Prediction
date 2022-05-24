@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='image/favicon.ico') }}" type="image/png"/>
+	<title>WellBeing-result </title>
+   
+	<!-- aos css file cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+      </head>
+
+</head>
+<body>
+    <!-- result section starts   -->
+
+    <section onsubmit="{{ url_for('result') }}" class="result" id="result" >
+
+        <h1 class="heading"> <span>Fill </span> in <span>your</span> data </h1>    
+    
+        <div class="row" data-aos="flip-down">
+    
+            <div class="image">
+                <img src="{{ url_for('static', filename='image/research.svg') }}">
+            </div>
+    
+            <form method="post" class="testing" action="{{ url_for('result') }}">
+                <!-- onsubmit="myfunction( output )" -->
+                <h3> Check your Results</h3>
+    
+                <input type="text" placeholder="Your Name" class="box" name="name" >
+                <input type="number" placeholder="Perimeter  Worst" class="box" name="Perimeter" required max="402" min="20" step="0.0001">
+                <input type="number" placeholder="Area Worst" class="box" name="Area" required max="6808" min="73" step="0.0001">
+                <input type="number" placeholder="Radius Worst" class="box" name="Radius" required max="58" min="3" step="0.0001">
+                <input type="number" placeholder="Concave Points Worst" class="box" name="Concave_Points" required max="0.5" min="0" step="0.0001">
+                <input type="submit" value="Check" class="btn">
+                <!-- -->
+            </form>
+          <!-- <p>{{ prediction_text }}</p> -->
+        </div>
+    </section>
+<!-- result section ends -->
+<!-- aos js file cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- custom js file link  -->
+<script src="{{ url_for('static', filename='js/result.js') }}"></script>
+
+<script>
+
+AOS.init({
+    duration:1000,
+    delay:400
+});
+
+</script>
+
+<script>
+let output = '{{ prediction_text }}'
+
+if (output === 'The Tumor is Malignant')
+    Swal.fire("Unfortunatly", output, '', 'warning')
+else if (output === 'The Tumor is Benign')
+    Swal.fire("Congratulations!" , output, '', 'success')
+</script>
+
+
+</body>
+</html>

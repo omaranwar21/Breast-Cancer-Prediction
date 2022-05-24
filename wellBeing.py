@@ -9,20 +9,29 @@ wellBeing = Flask(__name__, template_folder="templates")
 def website():
     return render_template('WellBeing.html')
 
-@wellBeing.route('/', methods=['POST'])
-def predict():
-    print(request.form.values())
+@wellBeing.route('/test')
+def test():
+    return render_template('result.html')
+
+@wellBeing.route('/result', methods=['POST'])
+def result():
+    request.form.values()
     formValues = [j for j in request.form.values()]
     name = formValues[0]
+    print(name)
     formValues.pop(0)
     floatFeatures = [float(j) for j in formValues]
-    print(name)
     features = [np.array (floatFeatures)]
-    prediction = model.predict (features)
+    prediction = int(model.predict (features))
+    print(features)
+    print(prediction)
+
     if prediction == 1:
-        return render_template('WellBeing.html', predictionText= "Unfortunatly, It is a Tumor.")
-    else:
-        return render_template('WellBeing.html', predictionText= "Congratulations! It is a Benign Tumor.")
+        prediction_text = 'Malignant'
+    elif prediction == 0:
+        prediction_text = 'Benign'
+
+    return render_template ('result.html', prediction_text = 'The Tumor is {}'.format(prediction_text),)
        
 if __name__ == "__main__":
     wellBeing.run(debug=True) 

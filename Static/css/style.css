@@ -347,3 +347,8 @@ section:nth-child(even){
     }
 
 }
+
+.swal2-container.swal2-center>.swal2-popup{
+    background-color: #f5f5f5 !important;
+    border: .2rem solid var(--pink);
+  }

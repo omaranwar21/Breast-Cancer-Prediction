@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="/Static/image/favicon.ico" type="image/png"/>
+	<link rel="shortcut icon" href="{{ url_for('static', filename='image/favicon.ico') }}" type="image/png"/>
 	<title>WellBeing </title>
    
 	<!-- aos css file cdn link  -->
@@ -49,7 +49,7 @@
         <h3>Early <span1> Detection </span1> </h3>
         <h3> For Your <span1> Protection </span1></h3>
         <p></p>
-        <a href="#result" class="btn"> Check the result <span class="fas fa-chevron-right"></span> </a>
+        <a href="/test" class="btn"> Check the result <span class="fas fa-chevron-right"></span> </a>
     </div>
 
 </section>
@@ -74,7 +74,7 @@
 			<h3>The results you can trust!</h3>
             <p>We believe that early diagnosis of Breast Cancer and the accurate classification of benign tumors can improve and prevent patients undergoing unnecessary treatments.</p>
             <p>WellBeing is here to provide you with the accurate results that you desire through our ML model.</p>
-            <a href="#result" class="btn"> Try Now <span class="fas fa-chevron-right"></span> </a>
+            <a href="/test" class="btn"> Try Now <span class="fas fa-chevron-right"></span> </a>
         </div>
     
     </div>
@@ -82,37 +82,6 @@
 </section>
 
 <!-- about section ends -->
-
-<!-- result section starts   -->
-
-<section class="result" id="result">
-
-    <h1 class="heading"> <span>Fill </span> in <span>your</span> data </h1>    
-
-    <div class="row" data-aos="flip-down">
-
-        <div class="image">
-            <img src="{{ url_for('static', filename='image/research.svg') }}" alt="">
-        </div>
-
-        <form action="">
-            <h3> Check your Results</h3>
-            <input type="text" placeholder="your name" class="box">
-            <input type="text" placeholder="your number" class="box">
-            <input type="email" placeholder="your email" class="box">
-            <input type="date" class="box">
-			<input type="text" placeholder="your name" class="box">
-			<input type="text" placeholder="your name" class="box">
-			<input type="text" placeholder="your name" class="box">
-			<input type="text" placeholder="your name" class="box">
-            <input type="submit" value=" Check" class="btn">
-        </form>
-
-    </div>
-
-</section>
-
-<!-- result section ends -->
 
 <!-- footer section starts  -->
 
