@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="{{ url_for('static', filename='image/favicon.ico') }}" type="image/png"/>
+	<link rel="shortcut icon" href="{{ url_for('static', filename='image/breast-cancer.ico.ico') }}" type="image/png"/>
 	<title>WellBeing-result </title>
    
 	<!-- aos css file cdn link  -->
@@ -24,12 +24,37 @@
       </head>
 
 </head>
+
 <body>
+
+    <!-- header section starts  -->
+
+<header class="header"  data-aos="zoom-out">
+
+    <div class="image">
+        <img src= "{{ url_for('static', filename='image/breast-cancer-icon.png') }}" alt="">
+        <a> WellBeing</a>  
+
+    </div>
+
+    <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="#footer">Contact Us</a>
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+</header>
+
+<!-- header section ends -->
+
     <!-- result section starts   -->
 
     <section onsubmit="{{ url_for('result') }}" class="result" id="result" >
 
-        <h1 class="heading"> <span>Fill </span> in <span>your</span> data </h1>    
+        <div class="heading" data-aos="fade-up">
+            <h1> <span>Fill </span> in <span>your</span> data</h1> 
+        </div>   
     
         <div class="row" data-aos="flip-down">
     
@@ -53,6 +78,36 @@
         </div>
     </section>
 <!-- result section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer" id="footer">
+
+    <div class="box-container">
+
+        <div class="box" data-aos="fade-up">
+            <h3>Contact Info.</h3>
+            <a href="#footer"> <i class="fas fa-phone"></i> +20 100-2227890 </a>
+            <a href="#footer"> <i class="fas fa-envelope"></i> team26@gmail.com </a>
+            <a href="#footer"> <i class="fas fa-map-marker-alt"></i> Cairo, Egypt  </a>
+            
+        </div>
+        <div class="box" data-aos="fade-up">
+            <h3>Our Team</h3>
+            <a href="#footer"> <i class="fas fa-id-card"></i> Omar Anwar</a>
+            <a href="#footer"> <i class="fas fa-id-card"></i> Mahmoud Yaser</a>
+            <a href="#footer"> <i class="fas fa-id-card"></i> Mayar Ehab</a>
+            <a href="#footer"> <i class="fas fa-id-card"></i> Maye Khaled</a>
+        </div>
+
+    </div>
+
+    <div class="credit"> Supervised by  <span>Dr. Ayman El Deib</span>  </div>
+
+</section>
+
+<!-- footer section ends -->
+
 <!-- aos js file cdn link  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
@@ -74,9 +129,9 @@ AOS.init({
 let output = '{{ prediction_text }}'
 
 if (output === 'The Tumor is Malignant')
-    Swal.fire("Unfortunatly"+''+output, '', 'warning')
+    Swal.fire("Unfortunatly! "+''+output, '', 'warning')
 else if (output === 'The Tumor is Benign')
-    Swal.fire("Congratulations!"+''+ output, '', 'success')
+    Swal.fire("Congratulations! "+''+ output, '', 'success')
 </script>
 
 

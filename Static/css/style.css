@@ -93,10 +93,21 @@ section:nth-child(even){
     justify-content: space-between;
     background: #fff;
 }
+.header .image{
+    flex:1 1 45rem;
+}
 
-.header .logo{
+.header .image img{
+    width: 20px;
+}
+
+.header .image a{
     font-size: 2.5rem;
     color: var(--black);
+    position: relative;
+    padding-left: 10px;
+    bottom: 6px;
+    font-weight: bold;
 }
 
 .header .logo i{
@@ -201,6 +212,21 @@ section:nth-child(even){
 	color:var(--pink);
 }
 
+.result .heading h1{
+    text-align: center;
+    padding-bottom: 2rem;
+    text-shadow: var(--text-shadow);
+    text-transform: uppercase;
+    color:var(--black);
+    font-size: 5rem;
+    letter-spacing: .4rem;
+    padding-top: 90px;
+}
+
+.result .heading h1 span{
+    text-transform: uppercase;
+    color:var(--pink);
+}
 .result .row{
     display: flex;
     align-items: center;
@@ -350,5 +376,14 @@ section:nth-child(even){
 
 .swal2-container.swal2-center>.swal2-popup{
     background-color: #f5f5f5 !important;
-    border: .2rem solid var(--pink);
+    border: var(--border)  !important;
   }
+
+  .swal2-styled.swal2-confirm {
+    border: 0 ;
+    border-radius: .25em ;
+    background: none ;
+    background-color: var(--pink) !important;
+    color: #fff ;
+    font-size: 1em ;
+}

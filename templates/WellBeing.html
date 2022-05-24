@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="{{ url_for('static', filename='image/favicon.ico') }}" type="image/png"/>
+	<link rel="shortcut icon" href="{{ url_for('static', filename='image/breast-cancer.ico.ico') }}" type="image/png"/>
 	<title>WellBeing </title>
    
 	<!-- aos css file cdn link  -->
@@ -23,7 +23,12 @@
 
 <header class="header"  data-aos="zoom-out">
 
-    <a href="#" class="logo"><i class="fas  fa-user-md"></i> WellBeing </a>
+    <div class="image">
+        <img src= "{{ url_for('static', filename='image/breast-cancer-icon.png') }}" alt="">
+        <a> WellBeing</a>  
+
+    </div>
+    
 
     <nav class="navbar">
         <a href="#home">Home</a>
@@ -94,6 +99,14 @@
             <a href="#footer"> <i class="fas fa-phone"></i> +20 100-2227890 </a>
             <a href="#footer"> <i class="fas fa-envelope"></i> team26@gmail.com </a>
             <a href="#footer"> <i class="fas fa-map-marker-alt"></i> Cairo, Egypt  </a>
+            
+        </div>
+        <div class="box" data-aos="fade-up">
+            <h3>Our Team</h3>
+            <a href="#footer"> <i class="fas fa-id-card"></i> Omar Anwar</a>
+            <a href="#footer"> <i class="fas fa-id-card"></i> Mahmoud Yaser</a>
+            <a href="#footer"> <i class="fas fa-id-card"></i> Mayar Ehab</a>
+            <a href="#footer"> <i class="fas fa-id-card"></i> Maye Khaled</a>
         </div>
 
     </div>
