@@ -61,6 +61,8 @@ def manualFeatureSelection(features, outcome, r=0.76, pro=0.01, corrType='p'):
 # Best manual features selected after many experiments were:
 # ['perimeter_worst', 'area_worst', 'radius_worst', 'concave points_worst']
 x_featuresManual = ['perimeter_worst', 'area_worst', 'radius_worst', 'concave points_worst']
+for i in x_featuresManual:
+    print(np.mean(x[x_featuresManual]))
 
 # Split data into (70%) train data and (30%) test data
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3)
